@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 RNA-seq FDA benchmark paper | Memoirs of a bioinformatician</title>
+  <meta name="description" content="This is an journaling blog for my work and reading related to bioinformatics." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 RNA-seq FDA benchmark paper | Memoirs of a bioinformatician" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is an journaling blog for my work and reading related to bioinformatics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 RNA-seq FDA benchmark paper | Memoirs of a bioinformatician" />
+  
+  <meta name="twitter:description" content="This is an journaling blog for my work and reading related to bioinformatics." />
+  
+
+<meta name="author" content="Payal Banerjee" />
+
+
+<meta name="date" content="2020-12-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="references.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Memoirs of a Bioinformatician </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About me</a></li>
+<li class="chapter" data-level="2" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>2</b> Literature</a></li>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
+<li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a><ul>
+<li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
+<li class="chapter" data-level="4.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="6" data-path="rna-fda.html"><a href="rna-fda.html"><i class="fa fa-check"></i><b>6</b> RNA-seq FDA benchmark paper</a></li>
+<li class="divider"></li>
+<li><a href="https://pbpayal.github.io/memoirs_of_bioinformatician/" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Memoirs of a bioinformatician</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="rna-fda" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> RNA-seq FDA benchmark paper</h1>
+<p><strong>Title</strong> <em><a href="https://www.nature.com/articles/s41598-020-74567-y#MOESM2">Impact of RNA-seq data analysis algorithms on gene expression estimation and downstream prediction</a></em></p>
+<div class="figure">
+<img src="images/rna1.png" alt="Results" />
+<p class="caption">Results</p>
+</div>
+<ul>
+<li><p>Accuracy - as the deviation of RNA-seq pipeline-derived log ratios of gene expression from the corresponding qPCR-based log ratios. A smaller deviation represents higher accuracy. Median normalization exhibited the lowest deviation, or the highest accuracy, compared with all other normalization methods.</p></li>
+<li><p>Precision - as the coefficient of variation (CoV) of gene expression across replicate libraries. Smaller CoV represents higher precision. pipelines with any of Bowtie2 multi-hit, GSNAP un-spliced, or Subread mapping and either count-based or Cufflinks quantification, except for the [Bowtie2 multi-hit + count-based + med.] pipeline, were the best choice for quantifying genes with high precision, or low CoV.</p></li>
+<li><p>Reliability - as the intra-class (i.e., intra-sample in the context of the SEQC-benchmark dataset) correlation (ICC) of gene expression. Larger ICC represents higher reliability. median normalization along with most mapping and quantification algorithms, except for the [Bowtie2 multi-hit + count-based] and [Novoalign + RSEM] pipelines, was the best choice for quantifying genes with high reliability, or high ICC.</p></li>
+</ul>
+<p><img src="images/pipeline_selection_strategy.png" alt="Pipeline Strategy" /> * The resulting heatmaps in accrodance to pipeline metrics strategy <img src="images/rna2.png" alt="Heatmaps of Accuracy, Precision, Reliability" /></p>
+<p><strong><em>Benchmarking datasets</em></strong> <img src="images/benchmark_datasets.png" alt="Datasets" /></p>
+<p><strong><em>The tools used in pipelines</em></strong> <img src="images/pipeline_tools.png" alt="Tools" /></p>
+<p><strong><em>Mapping tools used in pipelines</em></strong> <img src="images/mapping_tools.png" alt="Mapping or alignment tools" /></p>
+<p><strong><em>Quantification tools used in pipelines</em></strong> <img src="images/quantification_tools.png" alt="Quantification tools" /></p>
+<p>{<span class="citation">(<span class="citeproc-not-found" data-reference-id="rna-fda"><strong>???</strong></span>)</span>}</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="references.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Payal_Blog.pdf", "Payal_Blog.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

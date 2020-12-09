@@ -5,13 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1329089913",
+    "hash" : "2154972370",
     "id" : "316E6119",
-    "lastKnownWriteTime" : 1607536458,
-    "last_content_update" : 1607536458,
+    "lastKnownWriteTime" : 1607540368,
+    "last_content_update" : 1607540368715,
     "path" : "~/Documents/Payal_Scripts/R/Payal_Blog/_bookdown.yml",
     "project_path" : "_bookdown.yml",
     "properties" : {
+        "cursorPosition" : "2,17",
+        "scrollLine" : "0"
     },
     "relative_order" : 2,
     "source_on_save" : false,

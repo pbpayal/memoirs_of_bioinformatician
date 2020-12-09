@@ -5,13 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "203621217",
+    "hash" : "3704111756",
     "id" : "5B0F72BB",
-    "lastKnownWriteTime" : 1607536458,
-    "last_content_update" : 1607536458,
+    "lastKnownWriteTime" : 1607544248,
+    "last_content_update" : 1607544248972,
     "path" : "~/Documents/Payal_Scripts/R/Payal_Blog/index.Rmd",
     "project_path" : "index.Rmd",
     "properties" : {
+        "cursorPosition" : "12,2",
+        "scrollLine" : "0"
     },
     "relative_order" : 4,
     "source_on_save" : false,

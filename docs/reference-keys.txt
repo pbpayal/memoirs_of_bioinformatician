@@ -1,10 +1,8 @@
-fig:nice-fig
-tab:nice-tab
-prerequisites
-intro
+about-me
 literature
 methods
 applications
 example-one
 example-two
 final-words
+rna-fda

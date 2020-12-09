@@ -5,13 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1248109858",
+    "hash" : "3587725471",
     "id" : "5F4BB4DD",
-    "lastKnownWriteTime" : 1607536458,
-    "last_content_update" : 1607536458,
+    "lastKnownWriteTime" : 1607544141,
+    "last_content_update" : 1607544141555,
     "path" : "~/Documents/Payal_Scripts/R/Payal_Blog/_output.yml",
     "project_path" : "_output.yml",
     "properties" : {
+        "cursorPosition" : "8,29",
+        "scrollLine" : "0"
     },
     "relative_order" : 3,
     "source_on_save" : false,
