@@ -1,0 +1,40 @@
+--- 
+title: "Memoirs of a bioinformatician"
+author: "Payal Banerjee"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is an journaling blog for my work and reading related to bioinformatics."
+---
+
+# Bioinformatics Databases
+[//]: #  Create Markdown tables using this link -  https://www.tablesgenerator.com/markdown_tables
+[//]: # Always keep a line in between table header and table other wise markdown doesn't render properly
+
+Table: **Single Cell Databases**
+
+| Name             	| Description                                                 	| Link                               	|
+|------------------	|-------------------------------------------------------------	|------------------------------------	|
+| descartes        	| Single cell atlas                                           	| https://descartes.brotmanbaty.org/ 	|
+| PanglaoDB        	| Single cell RNA sequencing experiments from mouse and human 	| https://panglaodb.se/              	|
+| CancerSEA        	| Functional states of cancer cells at single-cell resolution 	|                                    	|
+| Human Cell Atlas 	| Reference maps of all human cells                           	| https://www.humancellatlas.org/    	|
+| Mouse Cell Atlas 	| Reference maps of mouse cells                               	| http://bis.zju.edu.cn/MCA/         	|
+
+
+Table: **RNA Seq Databases**
+
+| Name                    	| Description                                                                                                                                                                                                            	| Link                          	|
+|-------------------------	|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------	|
+| The Human Protein Atals 	| Maps all the human proteins in cells, tissues and organs using an integration of various omics technologies, including antibody-based imaging, mass spectrometry-based proteomics, transcriptomics and systems biology 	| https://www.proteinatlas.org/ 	|  
+
+Table : **RNA Seq Tutorials**
+
+Table: **Single Cell Seq Tutorials**
+
+Table: **RNA seq Downstram analysis tutorials**
+
+

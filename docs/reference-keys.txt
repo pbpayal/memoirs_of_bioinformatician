@@ -1,8 +1,3 @@
 about-me
-literature
-methods
-applications
-example-one
-example-two
-final-words
+bioinformatics-databases
 rna-fda
