@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 RNA-seq FDA benchmark paper | Memoirs of a bioinformatician</title>
+  <title>Chapter 4 RNA-seq FDA benchmark paper | Memoirs of a bioinformatician</title>
   <meta name="description" content="This is an journaling blog for my work and reading related to bioinformatics." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 RNA-seq FDA benchmark paper | Memoirs of a bioinformatician" />
+  <meta property="og:title" content="Chapter 4 RNA-seq FDA benchmark paper | Memoirs of a bioinformatician" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 RNA-seq FDA benchmark paper | Memoirs of a bioinformatician" />
+  <meta name="twitter:title" content="Chapter 4 RNA-seq FDA benchmark paper | Memoirs of a bioinformatician" />
   
   <meta name="twitter:description" content="This is an journaling blog for my work and reading related to bioinformatics." />
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Payal Banerjee" />
 
 
-<meta name="date" content="2020-12-10" />
+<meta name="date" content="2020-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="bioinformatics-databases.html"/>
+<link rel="prev" href="what-to-do-with-significant-differentially-expressed-genelist.html"/>
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -73,7 +73,16 @@
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About me</a></li>
 <li class="chapter" data-level="2" data-path="bioinformatics-databases.html"><a href="bioinformatics-databases.html"><i class="fa fa-check"></i><b>2</b> Bioinformatics Databases</a></li>
-<li class="chapter" data-level="3" data-path="rna-fda.html"><a href="rna-fda.html"><i class="fa fa-check"></i><b>3</b> RNA-seq FDA benchmark paper</a></li>
+<li class="chapter" data-level="3" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html"><i class="fa fa-check"></i><b>3</b> What to do with significant differentially expressed genelist?</a><ul>
+<li class="chapter" data-level="3.1" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#functional-enrichment-analysis"><i class="fa fa-check"></i><b>3.1</b> Functional Enrichment Analysis</a></li>
+<li class="chapter" data-level="3.2" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#pathways"><i class="fa fa-check"></i><b>3.2</b> Pathways</a></li>
+<li class="chapter" data-level="3.3" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#interaction-databases"><i class="fa fa-check"></i><b>3.3</b> Interaction Databases</a></li>
+<li class="chapter" data-level="3.4" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#text-mining"><i class="fa fa-check"></i><b>3.4</b> Text Mining</a></li>
+<li class="chapter" data-level="3.5" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#drug-interaction-database"><i class="fa fa-check"></i><b>3.5</b> Drug Interaction Database</a></li>
+<li class="chapter" data-level="3.6" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#rna-seq-specific-databases"><i class="fa fa-check"></i><b>3.6</b> RNA seq specific Databases</a></li>
+<li class="chapter" data-level="3.7" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#data-share"><i class="fa fa-check"></i><b>3.7</b> Data Share</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rna-fda.html"><a href="rna-fda.html"><i class="fa fa-check"></i><b>4</b> RNA-seq FDA benchmark paper</a></li>
 <li class="divider"></li>
 <li><a href="https://pbpayal.github.io/memoirs_of_bioinformatician/" target="blank">Published with bookdown</a></li>
 
@@ -95,7 +104,7 @@
 
             <section class="normal" id="section-">
 <div id="rna-fda" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> RNA-seq FDA benchmark paper</h1>
+<h1><span class="header-section-number">Chapter 4</span> RNA-seq FDA benchmark paper</h1>
 <p><strong>Title</strong> <em><a href="https://www.nature.com/articles/s41598-020-74567-y#MOESM2">Impact of RNA-seq data analysis algorithms on gene expression estimation and downstream prediction</a></em></p>
 <div class="figure">
 <img src="images/rna1.png" alt="Results" />
@@ -118,7 +127,7 @@
           </div>
         </div>
       </div>
-<a href="bioinformatics-databases.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="what-to-do-with-significant-differentially-expressed-genelist.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

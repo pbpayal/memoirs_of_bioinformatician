@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 What to do with significant differentially expressed genelist? | Memoirs of a bioinformatician</title>
+  <meta name="description" content="This is an journaling blog for my work and reading related to bioinformatics." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 What to do with significant differentially expressed genelist? | Memoirs of a bioinformatician" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is an journaling blog for my work and reading related to bioinformatics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 What to do with significant differentially expressed genelist? | Memoirs of a bioinformatician" />
+  
+  <meta name="twitter:description" content="This is an journaling blog for my work and reading related to bioinformatics." />
+  
+
+<meta name="author" content="Payal Banerjee" />
+
+
+<meta name="date" content="2020-12-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="what-to-do-with-significant-differentially-expressed-genelist.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Memoirs of a Bioinformatician </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About me</a></li>
+<li class="chapter" data-level="2" data-path="bioinformatics-databases.html"><a href="bioinformatics-databases.html"><i class="fa fa-check"></i><b>2</b> Bioinformatics Databases</a></li>
+<li class="chapter" data-level="3" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html"><i class="fa fa-check"></i><b>3</b> What to do with significant differentially expressed genelist?</a><ul>
+<li class="chapter" data-level="3.1" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#functional-enrichment-analysis"><i class="fa fa-check"></i><b>3.1</b> Functional Enrichment Analysis</a></li>
+<li class="chapter" data-level="3.2" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#pathways"><i class="fa fa-check"></i><b>3.2</b> Pathways</a></li>
+<li class="chapter" data-level="3.3" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#interaction-databases"><i class="fa fa-check"></i><b>3.3</b> Interaction Databases</a></li>
+<li class="chapter" data-level="3.4" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#text-mining"><i class="fa fa-check"></i><b>3.4</b> Text Mining</a></li>
+<li class="chapter" data-level="3.5" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#drug-interaction-database"><i class="fa fa-check"></i><b>3.5</b> Drug Interaction Database</a></li>
+<li class="chapter" data-level="3.6" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#rna-seq-specific-databases"><i class="fa fa-check"></i><b>3.6</b> RNA seq specific Databases</a></li>
+<li class="chapter" data-level="3.7" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#data-share"><i class="fa fa-check"></i><b>3.7</b> Data Share</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="what-to-do-with-significant-differentially-expressed-genelist-1.html"><a href="what-to-do-with-significant-differentially-expressed-genelist-1.html"><i class="fa fa-check"></i><b>4</b> What to do with significant differentially expressed genelist?</a><ul>
+<li class="chapter" data-level="4.1" data-path="what-to-do-with-significant-differentially-expressed-genelist-1.html"><a href="what-to-do-with-significant-differentially-expressed-genelist-1.html#functional-enrichment-analysis-1"><i class="fa fa-check"></i><b>4.1</b> Functional Enrichment Analysis</a></li>
+<li class="chapter" data-level="4.2" data-path="what-to-do-with-significant-differentially-expressed-genelist-1.html"><a href="what-to-do-with-significant-differentially-expressed-genelist-1.html#pathways-1"><i class="fa fa-check"></i><b>4.2</b> Pathways</a></li>
+<li class="chapter" data-level="4.3" data-path="what-to-do-with-significant-differentially-expressed-genelist-1.html"><a href="what-to-do-with-significant-differentially-expressed-genelist-1.html#interaction-databases-1"><i class="fa fa-check"></i><b>4.3</b> Interaction Databases</a></li>
+<li class="chapter" data-level="4.4" data-path="what-to-do-with-significant-differentially-expressed-genelist-1.html"><a href="what-to-do-with-significant-differentially-expressed-genelist-1.html#text-mining-1"><i class="fa fa-check"></i><b>4.4</b> Text Mining</a></li>
+<li class="chapter" data-level="4.5" data-path="what-to-do-with-significant-differentially-expressed-genelist-1.html"><a href="what-to-do-with-significant-differentially-expressed-genelist-1.html#drug-interaction-database-1"><i class="fa fa-check"></i><b>4.5</b> Drug Interaction Database</a></li>
+<li class="chapter" data-level="4.6" data-path="what-to-do-with-significant-differentially-expressed-genelist-1.html"><a href="what-to-do-with-significant-differentially-expressed-genelist-1.html#rna-seq-specific-databases-1"><i class="fa fa-check"></i><b>4.6</b> RNA seq specific Databases</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://pbpayal.github.io/memoirs_of_bioinformatician/" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Memoirs of a bioinformatician</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="what-to-do-with-significant-differentially-expressed-genelist-1" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> What to do with significant differentially expressed genelist?</h1>
+<div id="functional-enrichment-analysis-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Functional Enrichment Analysis</h2>
+<table style="width:100%;">
+<colgroup>
+<col width="4%" />
+<col width="81%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>g:Profiler</td>
+<td>Performs functional enrichment analysis, also known as over-representation analysis (ORA) or gene set enrichment analysis,<br>on input gene list. It maps genes to known functional information sources and detects statistically significantly enriched terms.</td>
+<td><a href="https://biit.cs.ut.ee/gprofiler/gost" class="uri">https://biit.cs.ut.ee/gprofiler/gost</a></td>
+</tr>
+<tr class="even">
+<td>DAVID</td>
+<td>Provides a comprehensive set of functional annotation tools for investigators to understand biological meaning behind large list of <br>genes.</td>
+<td><a href="https://david.ncifcrf.gov/" class="uri">https://david.ncifcrf.gov/</a></td>
+</tr>
+<tr class="odd">
+<td>Enrichr</td>
+<td>A suite of gene list enrichment analysis tools</td>
+<td><a href="https://maayanlab.cloud/Enrichr/" class="uri">https://maayanlab.cloud/Enrichr/</a></td>
+</tr>
+<tr class="even">
+<td>REViGO</td>
+<td>Takes long lists of Gene Ontology terms and summarize them by removing redundant GO terms. The remaining terms can be visualized in semantic similarity-based scatterplots,interactive graphs, or tag clouds.</td>
+<td><a href="http://revigo.irb.hr/" class="uri">http://revigo.irb.hr/</a></td>
+</tr>
+<tr class="odd">
+<td>WebGestalt</td>
+<td>Functional enrichment analysis web tool</td>
+<td><a href="http://www.webgestalt.org/" class="uri">http://www.webgestalt.org/</a></td>
+</tr>
+<tr class="even">
+<td>GSEA</td>
+<td>A computational method that determines whether a priori defined set of genes show significant, concordant differences between two biological states</td>
+<td><a href="https://www.gsea-msigdb.org/gsea/index.jsp" class="uri">https://www.gsea-msigdb.org/gsea/index.jsp</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="pathways-1" class="section level2">
+<h2><span class="header-section-number">4.2</span> Pathways</h2>
+<table>
+<colgroup>
+<col width="3%" />
+<col width="82%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>KEGG</td>
+<td>KEGG is a database resource for understanding high-level functions and <br>utilities of the biological system, such as the cell, the organism and <br>the ecosystem, from molecular-level information, especially large-scale <br>molecular datasets generated by genome sequencing and other <br>high-throughput experimental technologies.</td>
+<td><a href="https://www.genome.jp/kegg/" class="uri">https://www.genome.jp/kegg/</a></td>
+</tr>
+<tr class="even">
+<td>Reactome</td>
+<td>REACTOME is an open-source, open access, manually curated and <br>peer-reviewed pathway database. Our goal is to provide intuitive <br>bioinformatics tools for the visualization, interpretation and analysis <br>of pathway knowledge to support basic and clinical research, genome <br>analysis, modeling, systems biology and education.</td>
+<td><a href="https://reactome.org/" class="uri">https://reactome.org/</a></td>
+</tr>
+<tr class="odd">
+<td>Wiki Pathways</td>
+<td>WikiPathways is a database of biological pathways maintained by and for the scientific community.</td>
+<td><a href="https://www.wikipathways.org/index.php/WikiPathways" class="uri">https://www.wikipathways.org/index.php/WikiPathways</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="interaction-databases-1" class="section level2">
+<h2><span class="header-section-number">4.3</span> Interaction Databases</h2>
+<table style="width:100%;">
+<colgroup>
+<col width="8%" />
+<col width="71%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BioGRID</td>
+<td>A biomedical interaction repository with data compiled through comprehensive curation efforts.</td>
+<td><a href="https://thebiogrid.org/" class="uri">https://thebiogrid.org/</a></td>
+</tr>
+<tr class="even">
+<td>GeneMANIA</td>
+<td>Helps predict the function of your favourite genes and gene sets.</td>
+<td><a href="https://genemania.org/" class="uri">https://genemania.org/</a></td>
+</tr>
+<tr class="odd">
+<td>STRING</td>
+<td>Protein-Protein Interaction Networks</td>
+<td><a href="https://string-db.org/" class="uri">https://string-db.org/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="text-mining-1" class="section level2">
+<h2><span class="header-section-number">4.4</span> Text Mining</h2>
+</div>
+<div id="drug-interaction-database-1" class="section level2">
+<h2><span class="header-section-number">4.5</span> Drug Interaction Database</h2>
+</div>
+<div id="rna-seq-specific-databases-1" class="section level2">
+<h2><span class="header-section-number">4.6</span> RNA seq specific Databases</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="what-to-do-with-significant-differentially-expressed-genelist.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Payal_Blog.pdf", "Payal_Blog.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

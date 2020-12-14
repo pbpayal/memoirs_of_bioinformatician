@@ -11,7 +11,7 @@ description: "This is an journaling blog for my work and reading related to bioi
 ---
 
 # Bioinformatics Databases
-[//]: #  Create Markdown tables using this link -  https://www.tablesgenerator.com/markdown_tables
+[//]: # Create Markdown tables using this link -  https://www.tablesgenerator.com/markdown_tables
 [//]: # Always keep a line in between table header and table other wise markdown doesn't render properly
 
 Table: **Single Cell Databases**
@@ -23,6 +23,7 @@ Table: **Single Cell Databases**
 | CancerSEA        	| Functional states of cancer cells at single-cell resolution 	|                                    	|
 | Human Cell Atlas 	| Reference maps of all human cells                           	| https://www.humancellatlas.org/    	|
 | Mouse Cell Atlas 	| Reference maps of mouse cells                               	| http://bis.zju.edu.cn/MCA/         	|
+| DropViz 	| Exploring the Mouse Brain through Single Cell Expression Profiles                               	| http://dropviz.org/         	|
 
 
 Table: **RNA Seq Databases**
