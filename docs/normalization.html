@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Normalization | Memoirs of a bioinformatician</title>
+  <meta name="description" content="This is an journaling blog for my work and reading related to bioinformatics." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Normalization | Memoirs of a bioinformatician" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is an journaling blog for my work and reading related to bioinformatics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Normalization | Memoirs of a bioinformatician" />
+  
+  <meta name="twitter:description" content="This is an journaling blog for my work and reading related to bioinformatics." />
+  
+
+<meta name="author" content="Payal Banerjee" />
+
+
+<meta name="date" content="2020-12-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="bioinformatics-databases.html"/>
+<link rel="next" href="dispersion.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Memoirs of a Bioinformatician </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About me</a></li>
+<li class="chapter" data-level="2" data-path="bioinformatics-databases.html"><a href="bioinformatics-databases.html"><i class="fa fa-check"></i><b>2</b> Bioinformatics Databases</a><ul>
+<li class="chapter" data-level="2.1" data-path="bioinformatics-databases.html"><a href="bioinformatics-databases.html#deseq2-normalizationa-and-steps"><i class="fa fa-check"></i><b>2.1</b> Deseq2 Normalizationa and Steps</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="normalization.html"><a href="normalization.html"><i class="fa fa-check"></i><b>3</b> Normalization</a></li>
+<li class="chapter" data-level="4" data-path="dispersion.html"><a href="dispersion.html"><i class="fa fa-check"></i><b>4</b> Dispersion</a></li>
+<li class="chapter" data-level="5" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html"><i class="fa fa-check"></i><b>5</b> What to do with significant differentially expressed genelist?</a><ul>
+<li class="chapter" data-level="5.1" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#functional-enrichment-analysis"><i class="fa fa-check"></i><b>5.1</b> Functional Enrichment Analysis</a></li>
+<li class="chapter" data-level="5.2" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#pathways"><i class="fa fa-check"></i><b>5.2</b> Pathways</a></li>
+<li class="chapter" data-level="5.3" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#interaction-databases"><i class="fa fa-check"></i><b>5.3</b> Interaction Databases</a></li>
+<li class="chapter" data-level="5.4" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#text-mining"><i class="fa fa-check"></i><b>5.4</b> Text Mining</a></li>
+<li class="chapter" data-level="5.5" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#drug-interaction-database"><i class="fa fa-check"></i><b>5.5</b> Drug Interaction Database</a></li>
+<li class="chapter" data-level="5.6" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#rna-seq-specific-databases"><i class="fa fa-check"></i><b>5.6</b> RNA seq specific Databases</a></li>
+<li class="chapter" data-level="5.7" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#data-share"><i class="fa fa-check"></i><b>5.7</b> Data Share</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="rna-fda.html"><a href="rna-fda.html"><i class="fa fa-check"></i><b>6</b> RNA-seq FDA benchmark paper</a></li>
+<li class="divider"></li>
+<li><a href="https://pbpayal.github.io/memoirs_of_bioinformatician/" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Memoirs of a bioinformatician</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="normalization" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Normalization</h1>
+<ul>
+<li>Different library sizes or Sequencing depth</li>
+<li>RNA composition bias</li>
+</ul>
+<p>Since tools for differential expression analysis are comparing the counts between sample groups for the same gene, gene length does not need to be accounted for by the tool. However, sequencing depth and RNA composition do need to be taken into account.</p>
+<p>Generalized Linear Model - normalization Fits data into negative binomeal distribution <a href="https://hbctraining.github.io/DGE_workshop/lessons/02_DGE_count_normalization.html" class="uri">https://hbctraining.github.io/DGE_workshop/lessons/02_DGE_count_normalization.html</a></p>
+<p>In short: * Take geometric mean of gene's counts across all samples * Divide gene's counts in a sample by the geometric mean * Take median of these ratios -&gt; sample's normalization factor (applied to gene counts)</p>
+<p>To normalize for sequencing depth and RNA composition, DESeq2 uses the median of ratios method. On the user-end there is only one step, but on the back-end there are multiple steps involved, as described below.</p>
+<p>In Details : | | Sample 1 | Sample 2 |Sample 3| | ------ |:-------------:| -----:|-----:| | Gene 1| 0| 10 |4| | Gene 2| 2 | 6 |12| | Gene 3 | 33 |55|200|</p>
+<p>Step 1: Log of raw base counts Log with base e</p>
+<p>Step 2: Average of the logs for each gene in each sample</p>
+<p>Step 3: Filters genes with 0 counst in more than one sample</p>
+<p>Step 4: Subtract log(raw counts) -log(average) for eacg gene This is a ratio essentially of each gene across all samples</p>
+<p>Step 5: Calculate the median for each gene</p>
+<p>This helps to remove extreme gene expression like genes with high expression influencing genes with low expression. Thus focusing on genes with median expression and houskeeping genes</p>
+<p>Step 6: Convert median to normal values which is the scaling factor e^median = Normal</p>
+<p>Step 7: Divide original read counts by scaling factor</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="bioinformatics-databases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dispersion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Payal_Blog.pdf", "Payal_Blog.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 What to do with significant differentially expressed genelist? | Memoirs of a bioinformatician</title>
+  <title>Chapter 4 What to do with significant differentially expressed genelist? | Memoirs of a bioinformatician</title>
   <meta name="description" content="This is an journaling blog for my work and reading related to bioinformatics." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 What to do with significant differentially expressed genelist? | Memoirs of a bioinformatician" />
+  <meta property="og:title" content="Chapter 4 What to do with significant differentially expressed genelist? | Memoirs of a bioinformatician" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 What to do with significant differentially expressed genelist? | Memoirs of a bioinformatician" />
+  <meta name="twitter:title" content="Chapter 4 What to do with significant differentially expressed genelist? | Memoirs of a bioinformatician" />
   
   <meta name="twitter:description" content="This is an journaling blog for my work and reading related to bioinformatics." />
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Payal Banerjee" />
 
 
-<meta name="date" content="2020-12-14" />
+<meta name="date" content="2020-12-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="bioinformatics-databases.html"/>
+<link rel="prev" href="deseq2-normalization-and-steps.html"/>
 <link rel="next" href="rna-fda.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -73,16 +73,24 @@
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About me</a></li>
 <li class="chapter" data-level="2" data-path="bioinformatics-databases.html"><a href="bioinformatics-databases.html"><i class="fa fa-check"></i><b>2</b> Bioinformatics Databases</a></li>
-<li class="chapter" data-level="3" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html"><i class="fa fa-check"></i><b>3</b> What to do with significant differentially expressed genelist?</a><ul>
-<li class="chapter" data-level="3.1" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#functional-enrichment-analysis"><i class="fa fa-check"></i><b>3.1</b> Functional Enrichment Analysis</a></li>
-<li class="chapter" data-level="3.2" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#pathways"><i class="fa fa-check"></i><b>3.2</b> Pathways</a></li>
-<li class="chapter" data-level="3.3" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#interaction-databases"><i class="fa fa-check"></i><b>3.3</b> Interaction Databases</a></li>
-<li class="chapter" data-level="3.4" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#text-mining"><i class="fa fa-check"></i><b>3.4</b> Text Mining</a></li>
-<li class="chapter" data-level="3.5" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#drug-interaction-database"><i class="fa fa-check"></i><b>3.5</b> Drug Interaction Database</a></li>
-<li class="chapter" data-level="3.6" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#rna-seq-specific-databases"><i class="fa fa-check"></i><b>3.6</b> RNA seq specific Databases</a></li>
-<li class="chapter" data-level="3.7" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#data-share"><i class="fa fa-check"></i><b>3.7</b> Data Share</a></li>
+<li class="chapter" data-level="3" data-path="deseq2-normalization-and-steps.html"><a href="deseq2-normalization-and-steps.html"><i class="fa fa-check"></i><b>3</b> Deseq2 Normalization and Steps</a><ul>
+<li class="chapter" data-level="3.1" data-path="deseq2-normalization-and-steps.html"><a href="deseq2-normalization-and-steps.html#normalization"><i class="fa fa-check"></i><b>3.1</b> Normalization</a></li>
+<li class="chapter" data-level="3.2" data-path="deseq2-normalization-and-steps.html"><a href="deseq2-normalization-and-steps.html#dispersion"><i class="fa fa-check"></i><b>3.2</b> Dispersion</a></li>
+<li class="chapter" data-level="3.3" data-path="deseq2-normalization-and-steps.html"><a href="deseq2-normalization-and-steps.html#generalized-linear-model"><i class="fa fa-check"></i><b>3.3</b> Generalized Linear Model</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="deseq2-normalization-and-steps.html"><a href="deseq2-normalization-and-steps.html#why-negative-binomeal-distribution"><i class="fa fa-check"></i><b>3.3.1</b> Why negative binomeal distribution</a></li>
+<li class="chapter" data-level="3.3.2" data-path="deseq2-normalization-and-steps.html"><a href="deseq2-normalization-and-steps.html#statistical-significance-and-multiple-testing-correction"><i class="fa fa-check"></i><b>3.3.2</b> Statistical Significance and Multiple testing correction</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="rna-fda.html"><a href="rna-fda.html"><i class="fa fa-check"></i><b>4</b> RNA-seq FDA benchmark paper</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html"><i class="fa fa-check"></i><b>4</b> What to do with significant differentially expressed genelist?</a><ul>
+<li class="chapter" data-level="4.1" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#functional-enrichment-analysis"><i class="fa fa-check"></i><b>4.1</b> Functional Enrichment Analysis</a></li>
+<li class="chapter" data-level="4.2" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#pathways"><i class="fa fa-check"></i><b>4.2</b> Pathways</a></li>
+<li class="chapter" data-level="4.3" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#interaction-databases"><i class="fa fa-check"></i><b>4.3</b> Interaction Databases</a></li>
+<li class="chapter" data-level="4.4" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#text-mining"><i class="fa fa-check"></i><b>4.4</b> Text Mining</a></li>
+<li class="chapter" data-level="4.5" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#drug-interaction-database"><i class="fa fa-check"></i><b>4.5</b> Drug Interaction Database</a></li>
+<li class="chapter" data-level="4.6" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#rna-seq-specific-databases"><i class="fa fa-check"></i><b>4.6</b> RNA seq specific Databases</a></li>
+<li class="chapter" data-level="4.7" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#data-share"><i class="fa fa-check"></i><b>4.7</b> Data Share</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="rna-fda.html"><a href="rna-fda.html"><i class="fa fa-check"></i><b>5</b> RNA-seq FDA benchmark paper</a></li>
 <li class="divider"></li>
 <li><a href="https://pbpayal.github.io/memoirs_of_bioinformatician/" target="blank">Published with bookdown</a></li>
 
@@ -104,9 +112,9 @@
 
             <section class="normal" id="section-">
 <div id="what-to-do-with-significant-differentially-expressed-genelist" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> What to do with significant differentially expressed genelist?</h1>
+<h1><span class="header-section-number">Chapter 4</span> What to do with significant differentially expressed genelist?</h1>
 <div id="functional-enrichment-analysis" class="section level2">
-<h2><span class="header-section-number">3.1</span> Functional Enrichment Analysis</h2>
+<h2><span class="header-section-number">4.1</span> Functional Enrichment Analysis</h2>
 <table style="width:100%;">
 <colgroup>
 <col width="4%" />
@@ -160,7 +168,7 @@
 </table>
 </div>
 <div id="pathways" class="section level2">
-<h2><span class="header-section-number">3.2</span> Pathways</h2>
+<h2><span class="header-section-number">4.2</span> Pathways</h2>
 <table>
 <colgroup>
 <col width="3%" />
@@ -194,7 +202,7 @@
 </table>
 </div>
 <div id="interaction-databases" class="section level2">
-<h2><span class="header-section-number">3.3</span> Interaction Databases</h2>
+<h2><span class="header-section-number">4.3</span> Interaction Databases</h2>
 <table style="width:100%;">
 <colgroup>
 <col width="8%" />
@@ -228,7 +236,7 @@
 </table>
 </div>
 <div id="text-mining" class="section level2">
-<h2><span class="header-section-number">3.4</span> Text Mining</h2>
+<h2><span class="header-section-number">4.4</span> Text Mining</h2>
 <table>
 <colgroup>
 <col width="3%" />
@@ -262,7 +270,7 @@
 </table>
 </div>
 <div id="drug-interaction-database" class="section level2">
-<h2><span class="header-section-number">3.5</span> Drug Interaction Database</h2>
+<h2><span class="header-section-number">4.5</span> Drug Interaction Database</h2>
 <table style="width:100%;">
 <colgroup>
 <col width="5%" />
@@ -286,7 +294,7 @@
 </table>
 </div>
 <div id="rna-seq-specific-databases" class="section level2">
-<h2><span class="header-section-number">3.6</span> RNA seq specific Databases</h2>
+<h2><span class="header-section-number">4.6</span> RNA seq specific Databases</h2>
 <table>
 <colgroup>
 <col width="8%" />
@@ -325,7 +333,7 @@
 </table>
 </div>
 <div id="data-share" class="section level2">
-<h2><span class="header-section-number">3.7</span> Data Share</h2>
+<h2><span class="header-section-number">4.7</span> Data Share</h2>
 <table>
 <colgroup>
 <col width="1%" />
@@ -360,7 +368,7 @@
           </div>
         </div>
       </div>
-<a href="bioinformatics-databases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="deseq2-normalization-and-steps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="rna-fda.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

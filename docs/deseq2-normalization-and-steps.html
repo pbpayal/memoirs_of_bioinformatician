@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Memoirs of a bioinformatician</title>
+  <title>Chapter 3 Deseq2 Normalization and Steps | Memoirs of a bioinformatician</title>
   <meta name="description" content="This is an journaling blog for my work and reading related to bioinformatics." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Memoirs of a bioinformatician" />
+  <meta property="og:title" content="Chapter 3 Deseq2 Normalization and Steps | Memoirs of a bioinformatician" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Memoirs of a bioinformatician" />
+  <meta name="twitter:title" content="Chapter 3 Deseq2 Normalization and Steps | Memoirs of a bioinformatician" />
   
   <meta name="twitter:description" content="This is an journaling blog for my work and reading related to bioinformatics." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="bioinformatics-databases.html"/>
+<link rel="prev" href="bioinformatics-databases.html"/>
+<link rel="next" href="what-to-do-with-significant-differentially-expressed-genelist.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -111,35 +111,88 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Memoirs of a bioinformatician</h1>
-<p class="author"><em>Payal Banerjee</em></p>
-<p class="date"><em>2020-12-17</em></p>
+<div id="deseq2-normalization-and-steps" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Deseq2 Normalization and Steps</h1>
+<div id="normalization" class="section level2">
+<h2><span class="header-section-number">3.1</span> Normalization</h2>
+<ul>
+<li>Different library sizes or Sequencing depth</li>
+<li>RNA composition bias</li>
+</ul>
+<p>Since tools for differential expression analysis are comparing the counts between sample groups for the same gene, gene length does not need to be accounted for by the tool. However, sequencing depth and RNA composition do need to be taken into account.</p>
+<p>Fits data into negative binomeal distribution <a href="https://hbctraining.github.io/DGE_workshop/lessons/02_DGE_count_normalization.html" class="uri">https://hbctraining.github.io/DGE_workshop/lessons/02_DGE_count_normalization.html</a></p>
+<p>In short: * Take geometric mean of gene's counts across all samples * Divide gene's counts in a sample by the geometric mean * Take median of these ratios -&gt; sample's normalization factor (applied to gene counts)</p>
+<p>To normalize for sequencing depth and RNA composition, DESeq2 uses the median of ratios method. On the user-end there is only one step, but on the back-end there are multiple steps involved, as described below.</p>
+<p>In Details :</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Sample 1</th>
+<th align="right">Sample 2</th>
+<th align="right">Sample 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gene 1</td>
+<td align="center">0</td>
+<td align="right">10</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td>Gene 2</td>
+<td align="center">2</td>
+<td align="right">6</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td>Gene 3</td>
+<td align="center">33</td>
+<td align="right">55</td>
+<td align="right">200</td>
+</tr>
+</tbody>
+</table>
+<p>Step 1: Log of raw base counts Log with base e</p>
+<p>Step 2: Average of the logs for each gene in each sample</p>
+<p>Step 3: Filters genes with 0 counst in more than one sample</p>
+<p>Step 4: Subtract log(raw counts) -log(average) for eacg gene This is a ratio essentially of each gene across all samples</p>
+<p>Step 5: Calculate the median for each gene</p>
+<p>This helps to remove extreme gene expression like genes with high expression influencing genes with low expression. Thus focusing on genes with median expression and houskeeping genes</p>
+<p>Step 6: Convert median to normal values which is the scaling factor e^median = Normal</p>
+<p>Step 7: Divide original read counts by scaling factor</p>
 </div>
-<div id="about-me" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> About me</h1>
-<p><strong><a href="https://orcid.org/0000-0003-1599-0679">Orchid ID</a></strong></p>
-<div class="figure">
-<img src="images/tech_expertise.png" />
+<div id="dispersion" class="section level2">
+<h2><span class="header-section-number">3.2</span> Dispersion</h2>
+<p>When comparinng gene expression levels between groups, it is important to account for within group variabilty It is diffcult to estimate within group variabilty. Solution - pool information across genes which are expessed at similar level from replicates. Assumes that genes of similar average expression strength have similar dispersion.</p>
+<ul>
+<li>Maximum Likelihood - Dispersion estimates</li>
+<li>Fits a <strong>curve</strong> to capture the dependance of these estimates on the average expression strength</li>
+<li>Shrinks <strong>genewise values towards the curve</strong> using an empirical Baryes approach</li>
+</ul>
+</div>
+<div id="generalized-linear-model" class="section level2">
+<h2><span class="header-section-number">3.3</span> Generalized Linear Model</h2>
+<p>Follows negative binomeal distribution</p>
+<div id="why-negative-binomeal-distribution" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Why negative binomeal distribution</h3>
+</div>
+<div id="statistical-significance-and-multiple-testing-correction" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Statistical Significance and Multiple testing correction</h3>
+<p>Wald Test for significance Benjamini Hochenberg</p>
+<p>References - 1. <a href="https://youtu.be/UFB993xufUU">StatQuest: DESeq2, part 1, Library Normalization</a> 2. <a href="https://youtu.be/5tGCBW3_0IA">Differential expression analysis</a></p>
 
 </div>
-<div class="figure">
-<img src="images/publications.png" />
-
 </div>
-<div class="figure">
-<img src="images/education.png" />
-
-</div>
-
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="bioinformatics-databases.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bioinformatics-databases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="what-to-do-with-significant-differentially-expressed-genelist.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
