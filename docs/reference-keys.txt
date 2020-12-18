@@ -4,7 +4,7 @@ deseq2-normalization-and-steps
 normalization
 dispersion
 generalized-linear-model
-why-negative-binomeal-distribution
+why-negative-binomeal-distribution-for-analysing-rnaseq-data
 statistical-significance-and-multiple-testing-correction
 what-to-do-with-significant-differentially-expressed-genelist
 functional-enrichment-analysis

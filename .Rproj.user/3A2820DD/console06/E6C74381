@@ -600,3 +600,17 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ]0;~/Documents/Payal_Scripts/R/Payal_Blog(base) 3b6bz33:Payal_Blog pbanerjee$ git status[2Ppushcommit -m "Adding page on Deseq2"add -A[K
+]0;~/Documents/Payal_Scripts/R/Payal_Blog(base) 3b6bz33:Payal_Blog pbanerjee$ git add -Astatus[2Ppushcommit -m "Adding page on Deseq2"[1P[1P[1P[1P[1P[1P[1@E[1@d[1@i[1@t[1@i[1@n[1@g
+[main c3fc56b] Editing page on Deseq2
+ 3 files changed, 74 insertions(+), 4 deletions(-)
+]0;~/Documents/Payal_Scripts/R/Payal_Blog(base) 3b6bz33:Payal_Blog pbanerjee$ git commit -m "Editing page on Deseq2"add -A[Kstatus[2Ppush
+Enumerating objects: 15, done.
+Counting objects:   6% (1/15)Counting objects:  13% (2/15)Counting objects:  20% (3/15)Counting objects:  26% (4/15)Counting objects:  33% (5/15)Counting objects:  40% (6/15)Counting objects:  46% (7/15)Counting objects:  53% (8/15)Counting objects:  60% (9/15)Counting objects:  66% (10/15)Counting objects:  73% (11/15)Counting objects:  80% (12/15)Counting objects:  86% (13/15)Counting objects:  93% (14/15)Counting objects: 100% (15/15)Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects:  12% (1/8)Compressing objects:  25% (2/8)Compressing objects:  37% (3/8)Compressing objects:  50% (4/8)Compressing objects:  62% (5/8)Compressing objects:  75% (6/8)Compressing objects:  87% (7/8)Compressing objects: 100% (8/8)Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)Writing objects:  25% (2/8)Writing objects:  37% (3/8)Writing objects:  50% (4/8)Writing objects:  62% (5/8)Writing objects:  75% (6/8)Writing objects:  87% (7/8)Writing objects: 100% (8/8)Writing objects: 100% (8/8), 2.02 KiB | 41.00 KiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)[Kremote: Resolving deltas:  25% (1/4)[Kremote: Resolving deltas:  50% (2/4)[Kremote: Resolving deltas:  75% (3/4)[Kremote: Resolving deltas: 100% (4/4)[Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+To https://github.com/pbpayal/memoirs_of_bioinformatician.git
+   7229a15..c3fc56b  main -> main
+]0;~/Documents/Payal_Scripts/R/Payal_Blog(base) 3b6bz33:Payal_Blog pbanerjee$ git pushcommit -m "Editing page on Deseq2"add -A[K
