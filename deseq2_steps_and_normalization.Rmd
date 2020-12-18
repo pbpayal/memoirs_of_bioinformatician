@@ -7,6 +7,7 @@ output: html_document
 # Deseq2 Normalization and Steps
 
 ## Normalization
+
 * Different library sizes or Sequencing depth
 * RNA composition bias
 
@@ -54,6 +55,7 @@ Step 7:
 Divide original read counts by scaling factor
 
 ## Dispersion
+
 When comparinng gene expression levels between groups, it is important to account for within group variabilty
 It is diffcult to estimate within group variabilty. Solution - pool information across genes which are expessed at similar level from replicates. Assumes that genes of similar average expression strength have similar dispersion.
 
@@ -62,13 +64,16 @@ It is diffcult to estimate within group variabilty. Solution - pool information 
 * Shrinks **genewise values towards the curve** using an empirical Baryes approach
 
 ## Generalized Linear Model 
+
 Follows negative binomeal distribution
 
 ### Why negative binomeal distribution for analysing RNAseq data
+
 http://bridgeslab.sph.umich.edu/posts/why-do-we-use-the-negative-binomial-distribution-for-rnaseq
 
 
 ### Statistical Significance and Multiple testing correction
+
 Wald Test for significance
 Benjamini Hochenberg
 
