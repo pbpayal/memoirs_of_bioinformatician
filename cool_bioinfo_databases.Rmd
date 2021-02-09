@@ -1,13 +1,8 @@
 --- 
-title: "Memoirs of a bioinformatician"
+title: "Bioinformatics Databases"
 author: "Payal Banerjee"
-date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
-documentclass: book
-bibliography: [book.bib, packages.bib]
-biblio-style: apalike
-link-citations: yes
-description: "This is an journaling blog for my work and reading related to bioinformatics."
+date: "12/05/2020"
+output: html_document
 ---
 
 # Bioinformatics Databases
@@ -24,6 +19,7 @@ Table: **Single Cell Databases**
 | Human Cell Atlas 	| Reference maps of all human cells                           	| https://www.humancellatlas.org/    	|
 | Mouse Cell Atlas 	| Reference maps of mouse cells                               	| http://bis.zju.edu.cn/MCA/         	|
 | DropViz 	| Exploring the Mouse Brain through Single Cell Expression Profiles                               	| http://dropviz.org/         	|
+| Single-Cell Signature Explorer 	| Single-Cell Signature Explorer is a package of four softwares dedicated to high throughput signature exploration in single-cell RNAseq analysis.                               	| https://sites.google.com/site/fredsoftwares/products/single-cell-signature-explorer         	|
 
 
 Table: **RNA Seq Databases**

@@ -1,0 +1,16 @@
+---
+title: "Single Cell Tools"
+author: "Payal Banerjee"
+date: "2/9/2021"
+output: html_document
+---
+
+# Single Cell Tools
+
+Table: **Single Cell Tools**
+
+| Name                           | Description                                                                                                                                                                                                | Link                                                                                |   |   |
+|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|---|---|
+| Single-Cell Signature Explorer | Single-Cell Signature Explorer is a package of four softwares dedicated to high throughput signature exploration in single-cell RNAseq analysis.                                                           | https://sites.google.com/site/fredsoftwares/products/single-cell-signature-explorer |   |   |
+| URD                            | URD is an R package designed for reconstructing transcriptional trajectories underlying specification or differentiation processes in the form of a branching tree, using single cell RNA-sequencing data. | https://schierlab.biozentrum.unibas.ch/urd                                          |   |   |
+| STREAM                         | STREAM is an interactive computational pipeline for reconstructing complex celluar developmental trajectories from sc-qPCR, scRNA-seq or scATAC-seq data                                                   | https://stream.pinellolab.partners.org/                                             |   |   |

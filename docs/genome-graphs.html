@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Bioinformatics Databases | Memoirs of a bioinformatician</title>
+  <title>Chapter 5 Genome Graphs | Memoirs of a bioinformatician</title>
   <meta name="description" content="This is an journaling blog for my work and reading related to bioinformatics." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Bioinformatics Databases | Memoirs of a bioinformatician" />
+  <meta property="og:title" content="Chapter 5 Genome Graphs | Memoirs of a bioinformatician" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Bioinformatics Databases | Memoirs of a bioinformatician" />
+  <meta name="twitter:title" content="Chapter 5 Genome Graphs | Memoirs of a bioinformatician" />
   
   <meta name="twitter:description" content="This is an journaling blog for my work and reading related to bioinformatics." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="deseq2-normalization-and-steps.html"/>
+<link rel="prev" href="what-to-do-with-significant-differentially-expressed-genelist.html"/>
+<link rel="next" href="rna-fda.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -135,94 +135,184 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="bioinformatics-databases" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Bioinformatics Databases</h1>
-<table>
-<caption><strong>Single Cell Databases</strong></caption>
-<colgroup>
-<col width="16%" />
-<col width="52%" />
-<col width="31%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Description</th>
-<th>Link</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>descartes</td>
-<td>Single cell atlas</td>
-<td><a href="https://descartes.brotmanbaty.org/" class="uri">https://descartes.brotmanbaty.org/</a></td>
-</tr>
-<tr class="even">
-<td>PanglaoDB</td>
-<td>Single cell RNA sequencing experiments from mouse and human</td>
-<td><a href="https://panglaodb.se/" class="uri">https://panglaodb.se/</a></td>
-</tr>
-<tr class="odd">
-<td>CancerSEA</td>
-<td>Functional states of cancer cells at single-cell resolution</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Human Cell Atlas</td>
-<td>Reference maps of all human cells</td>
-<td><a href="https://www.humancellatlas.org/" class="uri">https://www.humancellatlas.org/</a></td>
-</tr>
-<tr class="odd">
-<td>Mouse Cell Atlas</td>
-<td>Reference maps of mouse cells</td>
-<td><a href="http://bis.zju.edu.cn/MCA/" class="uri">http://bis.zju.edu.cn/MCA/</a></td>
-</tr>
-<tr class="even">
-<td>DropViz</td>
-<td>Exploring the Mouse Brain through Single Cell Expression Profiles</td>
-<td><a href="http://dropviz.org/" class="uri">http://dropviz.org/</a></td>
-</tr>
-<tr class="odd">
-<td>Single-Cell Signature Explorer</td>
-<td>Single-Cell Signature Explorer is a package of four softwares dedicated to high throughput signature exploration in single-cell RNAseq analysis.</td>
-<td><a href="https://sites.google.com/site/fredsoftwares/products/single-cell-signature-explorer" class="uri">https://sites.google.com/site/fredsoftwares/products/single-cell-signature-explorer</a></td>
-</tr>
-</tbody>
-</table>
-<table style="width:100%;">
-<caption><strong>RNA Seq Databases</strong></caption>
-<colgroup>
-<col width="9%" />
-<col width="78%" />
-<col width="11%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Description</th>
-<th>Link</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>The Human Protein Atals</td>
-<td>Maps all the human proteins in cells, tissues and organs using an integration of various omics technologies, including antibody-based imaging, mass spectrometry-based proteomics, transcriptomics and systems biology</td>
-<td><a href="https://www.proteinatlas.org/" class="uri">https://www.proteinatlas.org/</a></td>
-</tr>
-</tbody>
-</table>
-<p>Table : <strong>RNA Seq Tutorials</strong></p>
-<p>Table: <strong>Single Cell Seq Tutorials</strong></p>
-<p>Table: <strong>RNA seq Downstram analysis tutorials</strong></p>
+<div id="genome-graphs" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Genome Graphs</h1>
+<p><strong>Title</strong> <em><a href="https://genome.cshlp.org/content/early/2017/03/30/gr.214155.116">Genome graphs and the evolution of genome inference</a></em></p>
+<div id="human-reference-genome" class="section level2">
+<h2><span class="header-section-number">5.1</span> Human Reference Genome</h2>
+<ul>
+<li>The first draft genome was published in 2001</li>
+<li>The ‘complete’ genome, meaning 99% of the euchromatic sequence with multiple gaps in the assembly, was announced in 2003</li>
+<li>Currently, the human genome is at version 38 (GRCh38)</li>
+<li>fewer than 1000 reported gaps (Genome Research Consortium [GRC])</li>
+</ul>
+</div>
+<div id="pitfalls" class="section level2">
+<h2><span class="header-section-number">5.2</span> Pitfalls</h2>
+<ul>
+<li>Of the 20 donors the reference was meant to sample from, 70% of the sequence was obtained from a single sample, ‘RPC-11’, from an individual who had a high risk for diabetes</li>
+<li>The remaining 30% is split 23% from 10 samples and 7% from over 50 sources</li>
+<li>After the sequencing of the first personal genomes in 2007, the emerging differences between genomes suggested that the reference could not easily serve as a universal or ‘gold-standard’ genome</li>
+<li>The HapMap project and the subsequent 1000 Genomes Project were a partial consequence of the need to sample broader population variability</li>
+</ul>
+<p><em><strong>In short, there is lack of diversity in reference genome</strong></em></p>
+<div id="thus-there-is-reference-bias" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Thus there is Reference Bias</h3>
+<p>Variations that are not present in the current reference will not be detected anyways if just resequencing</p>
+</div>
+</div>
+<div id="potential-solutions" class="section level2">
+<h2><span class="header-section-number">5.3</span> Potential Solutions</h2>
+<ul>
+<li><p>Gold-standard reference cohorts each specific for a particular population</p></li>
+<li><p>Development of pan-genomes, comprising a collection of multiple genomes from the same species Pangenomes – these genomes could vary by insertions, deletions, structural rearrangements , large and small mutations</p></li>
+<li><p>De novo assembly to make inferences on individual samples</p></li>
+</ul>
+</div>
+<div id="how-to-encapsulate-all-that-information" class="section level2">
+<h2><span class="header-section-number">5.4</span> How to encapsulate all that information ?</h2>
+<div id="genome-graphs-1" class="section level3">
+<h3><span class="header-section-number">5.4.1</span> <em><strong>Genome Graphs</strong></em></h3>
+</div>
+</div>
+<div id="existing-co-ordinate-systems" class="section level2">
+<h2><span class="header-section-number">5.5</span> Existing Co-ordinate systems</h2>
+<ul>
+<li>Existing primary reference genome is a poor coordinate space</li>
+<li>Doesn’t capture hundreds of alternative locus scaffolds overlapping each genomic location, across the entire primary reference genome</li>
+<li>Much large structural variation is not adequately described by the coordinates provided by the primary reference.</li>
+</ul>
+<p>Fig</p>
+<ol style="list-style-type: upper-alpha">
+<li>A reference cohort, in which there is no attempt to identify homologies between the genome sequences. (B) A genome graph, in which homologies are collapsed and included as alternate paths in the graph.</li>
+</ol>
+<ul>
+<li>Existing reference coordinate systems:</li>
+<li>Variant databases use the reference coordinate systems</li>
+<li>Gene and transcript annotations</li>
+<li>Genome browsers use linear tracks of genomic data, and graph visualizations</li>
+</ul>
+</div>
+<div id="potential-solution---sequence-graphs" class="section level2">
+<h2><span class="header-section-number">5.6</span> Potential Solution - Sequence graphs</h2>
+<ul>
+<li>Sequences represented as walks in graph</li>
+<li>De Bruijn graphs – directed graphs</li>
+<li>Nodes are kmers</li>
+<li>Edges are bases between “to” and “from” node</li>
+<li><p>Alternative paths stand in for both structural and single variants</p></li>
+<li><p>But just directed graphs are not enough, as they donot express strandness – forward or reverse</p></li>
+<li><p>Hence <strong>bi-directed graphs or Sequence Graphs</strong> !</p></li>
+<li><p>But again all inversions, reverse tandem duplications, and arbitrarily complex rearrangements cannot be represented in just bi-directed graph</p></li>
+<li>Thus <strong>Bi-edged graphs</strong> !!</li>
+<li><p>Edge labeled version of bidirected graphs</p></li>
+</ul>
+<p>Fig</p>
+<p>Four types of genome graphs, all constructed from the pair of sequences ATCCCCTA and ATGTCTA. (A) De Bruijn graph. (B) Directed acyclic graph. (C) Bidirected graph (a.k.a., sequence graph). (D) Biedged graph (a.k.a., biedged sequence graph).</p>
+<div id="things-to-consider" class="section level3">
+<h3><span class="header-section-number">5.6.1</span> Things to consider:</h3>
+<ul>
+<li>The moment we move to sequence graphs defining a locus becomes a problem Graphs have multiple paths, which have complex relationships</li>
+<li>Allelism in graphs</li>
+<li>Repeatome</li>
+<li>Hierarchy</li>
+<li>Pangenome ordering</li>
+</ul>
+</div>
+<div id="allelism-in-graphs" class="section level3">
+<h3><span class="header-section-number">5.6.2</span> Allelism in graphs</h3>
+<p>Sites described as motifs called superbubble or ultrabubble - Directed acyclic subgraphs - connects through 1 source node and 1 sink node * New variants - add Motifs * Nested and overlapping subgraphs in structural variants However - Not all variation nicely partitioned</p>
+<p>Fig</p>
+<p>Ultrabubble sites in a biedged sequence graph. Each arrow shows the terminal node of a site. The color of the arrows indicates the node pairing. Note that the ultrabubble denoted by the gray pair of arrows is nested within the ultrabubble denoted by the purple arrows.</p>
+</div>
+<div id="repeatome-as-array-sequence-graphs" class="section level3">
+<h3><span class="header-section-number">5.6.3</span> Repeatome as Array Sequence Graphs</h3>
+<ul>
+<li>Highly repetitive satellite arrays</li>
+<li>Centromeres</li>
+<li>Ribosome</li>
+<li>Subgraphs of instances of type of repeat</li>
+<li>Similar instances of repeat were combined within graph node</li>
+</ul>
+<p>Fig A schematic example of an “Array Sequence Graph” of the type used to construct a linearization of the DXZ1 repeat array in the X Chromosome centromere. A collection of reads (top) shown in the context of a consensus higher-order repeat are converted into a graph representation (bottom). A cycle around the graph represents a higher-order repeat, and the individual repeat units (oblongs) are represented within each node (circles). Edges between individual repeat units represent phasing information from input reads. Transitions between nodes are annotated with probabilities. (Adapted from Miga et al. 2014)</p>
+</div>
+<div id="hierarchy" class="section level3">
+<h3><span class="header-section-number">5.6.4</span> Hierarchy</h3>
+<ul>
+<li>Hierarchy of graphs</li>
+<li>In most collapsed graphs
+<ul>
+<li>Repetitive elements are completely collapsed</li>
+<li>Input sequences are least collapsed</li>
+<li>Monoallelic representation of genome - Intermediates</li>
+</ul></li>
+<li>Mapping a subsequence to an element in more collapsed graphs in hierarchy automatically implies the mapping of the subsequence to all the more collapsed version of the element.</li>
+<li>Eg: mapping of repeat instance would imply mapping to the canonical copy, classifying it as an instance of the repeat type.</li>
+</ul>
+<p>Fig</p>
+</div>
+<div id="pangenome-ordering" class="section level3">
+<h3><span class="header-section-number">5.6.5</span> Pangenome ordering</h3>
+<ul>
+<li>Linear ordering of node Fig A pangenome ordering on a graph constructed from two genomes. The red edges indicate the path of the pangenome through the graph. The solid and dotted edges indicate the adjacencies between nodes in the two source genomes. (Adapted from Nguyen et al. 2015)</li>
+</ul>
+</div>
+<div id="how-to-decipher-genome-graphs" class="section level3">
+<h3><span class="header-section-number">5.6.6</span> How to decipher Genome Graphs</h3>
+<ul>
+<li>&quot;unrolls&quot; and &quot;unfolds&quot;</li>
+</ul>
+<p><strong>bidirected cyclic graphs &gt; directed acyclic graphs</strong> Fig</p>
+</div>
+<div id="extending-mapping-to-genome-graphs" class="section level3">
+<h3><span class="header-section-number">5.6.7</span> Extending mapping to genome graphs</h3>
+<ul>
+<li>Indexing</li>
+<li>Self-index
+<ul>
+<li>Graph Positional Burrows Wheeler Transform - Graph-PBWT(gPBWT) [vg]</li>
+</ul></li>
+<li>K-mer lookup</li>
+<li>Distance Measurement</li>
+<li>To account for the distance between paired end reads Its difficult to calculate distance between mappings and the relative orientations in graphs</li>
+<li>Context mapping</li>
+<li>Flanking sequences</li>
+</ul>
+</div>
+</div>
+<div id="graphs-should-include" class="section level2">
+<h2><span class="header-section-number">5.7</span> Graphs should include</h2>
+<ul>
+<li><p>Population cohorts</p></li>
+<li>Representation of :</li>
+<li>Alternate allele</li>
+<li>Repeats</li>
+<li><p>Large structural variations</p></li>
+<li><p>Potential to accommodate new novel variations</p></li>
+</ul>
+</div>
+<div id="challenges-to-graph-genomes" class="section level2">
+<h2><span class="header-section-number">5.8</span> Challenges to graph genomes</h2>
+<ul>
+<li>Making the cohort information compact enough to store in memory is difficult</li>
+<li>Compact data is hard to perform computation on</li>
+<li>New tools to read and interpret graph based genomes</li>
+<li>Indexing in graphs is complicated</li>
+<li>New co-ordinate system</li>
+<li>New data formats</li>
+<li>Updating all databases, annotations and data formats</li>
+</ul>
+<p><em><strong>Basically reinventing the wheel !</strong></em></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="deseq2-normalization-and-steps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="what-to-do-with-significant-differentially-expressed-genelist.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rna-fda.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

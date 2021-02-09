@@ -13,14 +13,18 @@ output: html_document
 
 Since tools for differential expression analysis are comparing the counts between sample groups for the same gene, gene length does not need to be accounted for by the tool. However, sequencing depth and RNA composition do need to be taken into account.
 
-In short:
-* Take geometric mean of gene's counts across all samples
-* Divide gene's counts in a sample by the geometric mean
-* Take median of these ratios -> sample's normalization factor (applied to gene counts)
-
 To normalize for sequencing depth and RNA composition, DESeq2 uses the median of ratios method. On the user-end there is only one step, but on the back-end there are multiple steps involved, as described below.
 
-In Details :
+**In Short:**
+
+* Take geometric mean of gene's counts across all samples
+
+* Divide gene's counts in a sample by the geometric mean
+
+* Take median of these ratios -> sample's normalization factor (applied to gene counts)
+
+
+**In Details:**
 
 |        | Sample 1          | Sample 2  |Sample 3|
 | ------ |:-------------:| -----:|-----:|
@@ -28,30 +32,30 @@ In Details :
 | Gene 2| 2 | 6 |12|
 | Gene 3 | 33 |55|200|
 
-Step 1:
+_Step 1_:
 Log of raw base counts
 Log with base e
 
-Step 2:
+_Step 2_:
 Average of the logs for each gene in each sample
 
-Step 3:
+_Step 3_:
 Filters genes with 0 counst in more than one sample
 
-Step 4:
+_Step 4_:
 Subtract log(raw counts) -log(average) for eacg gene
 This is a ratio essentially of each gene across all samples
 
-Step 5:
+_Step 5_:
 Calculate the median for each gene
 
 This helps to remove extreme gene expression like genes with high expression influencing genes with low expression. Thus focusing on genes with median expression and houskeeping genes
 
-Step 6: 
+_Step 6_: 
 Convert median to normal values which is the scaling factor
 e^median = Normal
 
-Step 7:
+_Step 7_:
 Divide original read counts by scaling factor
 
 ## Dispersion
@@ -59,8 +63,10 @@ Divide original read counts by scaling factor
 When comparinng gene expression levels between groups, it is important to account for within group variabilty
 It is diffcult to estimate within group variabilty. Solution - pool information across genes which are expessed at similar level from replicates. Assumes that genes of similar average expression strength have similar dispersion.
 
-* Maximum Likelihood - Dispersion estimates
+* **Maximum Likelihood** - Dispersion estimates
+
 * Fits a **curve** to capture the dependance of these estimates on the average expression strength
+
 * Shrinks **genewise values towards the curve** using an empirical Baryes approach
 
 ## Generalized Linear Model 
@@ -69,16 +75,19 @@ Follows negative binomeal distribution
 
 ### Why negative binomeal distribution for analysing RNAseq data
 
-http://bridgeslab.sph.umich.edu/posts/why-do-we-use-the-negative-binomial-distribution-for-rnaseq
-
+Explained quite nicely [here](http://bridgeslab.sph.umich.edu/posts/why-do-we-use-the-negative-binomial-distribution-for-rnaseq)
 
 ### Statistical Significance and Multiple testing correction
 
 Wald Test for significance
+
 Benjamini Hochenberg
 
-References - 
-1. [StatQuest: DESeq2, part 1, Library Normalization](https://youtu.be/UFB993xufUU) 
+## References
+
+1. [StatQuest: DESeq2, part 1, Library Normalization](https://youtu.be/UFB993xufUU)
+
 2. [Differential expression analysis](https://youtu.be/5tGCBW3_0IA)
+
 3. [HCB training](https://hbctraining.github.io/DGE_workshop/lessons/02_DGE_count_normalization.html)
 

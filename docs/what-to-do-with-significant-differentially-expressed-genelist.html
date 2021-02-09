@@ -24,7 +24,7 @@
 <meta name="author" content="Payal Banerjee" />
 
 
-<meta name="date" content="2020-12-18" />
+<meta name="date" content="2020-12-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="deseq2-normalization-and-steps.html"/>
-<link rel="next" href="rna-fda.html"/>
+<link rel="next" href="genome-graphs.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -80,6 +80,7 @@
 <li class="chapter" data-level="3.3.1" data-path="deseq2-normalization-and-steps.html"><a href="deseq2-normalization-and-steps.html#why-negative-binomeal-distribution-for-analysing-rnaseq-data"><i class="fa fa-check"></i><b>3.3.1</b> Why negative binomeal distribution for analysing RNAseq data</a></li>
 <li class="chapter" data-level="3.3.2" data-path="deseq2-normalization-and-steps.html"><a href="deseq2-normalization-and-steps.html#statistical-significance-and-multiple-testing-correction"><i class="fa fa-check"></i><b>3.3.2</b> Statistical Significance and Multiple testing correction</a></li>
 </ul></li>
+<li class="chapter" data-level="3.4" data-path="deseq2-normalization-and-steps.html"><a href="deseq2-normalization-and-steps.html#references"><i class="fa fa-check"></i><b>3.4</b> References</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html"><i class="fa fa-check"></i><b>4</b> What to do with significant differentially expressed genelist?</a><ul>
 <li class="chapter" data-level="4.1" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#functional-enrichment-analysis"><i class="fa fa-check"></i><b>4.1</b> Functional Enrichment Analysis</a></li>
@@ -90,7 +91,30 @@
 <li class="chapter" data-level="4.6" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#rna-seq-specific-databases"><i class="fa fa-check"></i><b>4.6</b> RNA seq specific Databases</a></li>
 <li class="chapter" data-level="4.7" data-path="what-to-do-with-significant-differentially-expressed-genelist.html"><a href="what-to-do-with-significant-differentially-expressed-genelist.html#data-share"><i class="fa fa-check"></i><b>4.7</b> Data Share</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="rna-fda.html"><a href="rna-fda.html"><i class="fa fa-check"></i><b>5</b> RNA-seq FDA benchmark paper</a></li>
+<li class="chapter" data-level="5" data-path="genome-graphs.html"><a href="genome-graphs.html"><i class="fa fa-check"></i><b>5</b> Genome Graphs</a><ul>
+<li class="chapter" data-level="5.1" data-path="genome-graphs.html"><a href="genome-graphs.html#human-reference-genome"><i class="fa fa-check"></i><b>5.1</b> Human Reference Genome</a></li>
+<li class="chapter" data-level="5.2" data-path="genome-graphs.html"><a href="genome-graphs.html#pitfalls"><i class="fa fa-check"></i><b>5.2</b> Pitfalls</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="genome-graphs.html"><a href="genome-graphs.html#thus-there-is-reference-bias"><i class="fa fa-check"></i><b>5.2.1</b> Thus there is Reference Bias</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="genome-graphs.html"><a href="genome-graphs.html#potential-solutions"><i class="fa fa-check"></i><b>5.3</b> Potential Solutions</a></li>
+<li class="chapter" data-level="5.4" data-path="genome-graphs.html"><a href="genome-graphs.html#how-to-encapsulate-all-that-information"><i class="fa fa-check"></i><b>5.4</b> How to encapsulate all that information ?</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="genome-graphs.html"><a href="genome-graphs.html#genome-graphs-1"><i class="fa fa-check"></i><b>5.4.1</b> <em><strong>Genome Graphs</strong></em></a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="genome-graphs.html"><a href="genome-graphs.html#existing-co-ordinate-systems"><i class="fa fa-check"></i><b>5.5</b> Existing Co-ordinate systems</a></li>
+<li class="chapter" data-level="5.6" data-path="genome-graphs.html"><a href="genome-graphs.html#potential-solution---sequence-graphs"><i class="fa fa-check"></i><b>5.6</b> Potential Solution - Sequence graphs</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="genome-graphs.html"><a href="genome-graphs.html#things-to-consider"><i class="fa fa-check"></i><b>5.6.1</b> Things to consider:</a></li>
+<li class="chapter" data-level="5.6.2" data-path="genome-graphs.html"><a href="genome-graphs.html#allelism-in-graphs"><i class="fa fa-check"></i><b>5.6.2</b> Allelism in graphs</a></li>
+<li class="chapter" data-level="5.6.3" data-path="genome-graphs.html"><a href="genome-graphs.html#repeatome-as-array-sequence-graphs"><i class="fa fa-check"></i><b>5.6.3</b> Repeatome as Array Sequence Graphs</a></li>
+<li class="chapter" data-level="5.6.4" data-path="genome-graphs.html"><a href="genome-graphs.html#hierarchy"><i class="fa fa-check"></i><b>5.6.4</b> Hierarchy</a></li>
+<li class="chapter" data-level="5.6.5" data-path="genome-graphs.html"><a href="genome-graphs.html#pangenome-ordering"><i class="fa fa-check"></i><b>5.6.5</b> Pangenome ordering</a></li>
+<li class="chapter" data-level="5.6.6" data-path="genome-graphs.html"><a href="genome-graphs.html#how-to-decipher-genome-graphs"><i class="fa fa-check"></i><b>5.6.6</b> How to decipher Genome Graphs</a></li>
+<li class="chapter" data-level="5.6.7" data-path="genome-graphs.html"><a href="genome-graphs.html#extending-mapping-to-genome-graphs"><i class="fa fa-check"></i><b>5.6.7</b> Extending mapping to genome graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="genome-graphs.html"><a href="genome-graphs.html#graphs-should-include"><i class="fa fa-check"></i><b>5.7</b> Graphs should include</a></li>
+<li class="chapter" data-level="5.8" data-path="genome-graphs.html"><a href="genome-graphs.html#challenges-to-graph-genomes"><i class="fa fa-check"></i><b>5.8</b> Challenges to graph genomes</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="rna-fda.html"><a href="rna-fda.html"><i class="fa fa-check"></i><b>6</b> RNA-seq FDA benchmark paper</a></li>
+<li class="chapter" data-level="7" data-path="single-cell-tools.html"><a href="single-cell-tools.html"><i class="fa fa-check"></i><b>7</b> Single Cell Tools</a></li>
 <li class="divider"></li>
 <li><a href="https://pbpayal.github.io/memoirs_of_bioinformatician/" target="blank">Published with bookdown</a></li>
 
@@ -369,7 +393,7 @@
         </div>
       </div>
 <a href="deseq2-normalization-and-steps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rna-fda.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="genome-graphs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
